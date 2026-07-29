@@ -1,0 +1,12 @@
+# NAME: NetflixSupplement
+# AUTHOR: rrxl
+# REPO: https://github.com/rrxl/shadowrocket-rule-supplement
+# UPDATED: 2026-07-29
+# DESCRIPTION: Supplement rules for blackmatrix7 Netflix.list
+
+# Missing AWS endpoint pattern from upstream community rules
+DOMAIN-KEYWORD,apiproxy-website-nlb-prod-
+
+# Community reported PS5/TV playback issue
+# Source: blackmatrix7 ios_rule_script PR #1570
+IP-CIDR,119.31.191.0/24,no-resolve
