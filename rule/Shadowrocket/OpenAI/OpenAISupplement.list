@@ -1,0 +1,15 @@
+# NAME: OpenAI Supplement
+# AUTHOR: rrxl
+# PURPOSE: Supplement blackmatrix7/ios_rule_script OpenAI rules
+# VERIFIED: 2026-07-29
+
+DOMAIN-SUFFIX,ct.sendgrid.net
+DOMAIN-SUFFIX,oaistatsig.com
+DOMAIN,cdn.workos.com
+DOMAIN,challenges.cloudflare.com
+DOMAIN,forwarder.workos.com
+DOMAIN,humb.apple.com
+DOMAIN,images.workoscdn.com
+DOMAIN,rum.browser-intake-datadoghq.com
+DOMAIN,setup.workos.com
+DOMAIN,workos.imgix.net
