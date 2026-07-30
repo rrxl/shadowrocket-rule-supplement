@@ -1,0 +1,31 @@
+# NAME: Claude Supplement
+# AUTHOR: rrxl
+# REPO: https://github.com/rrxl/shadowrocket-rule-supplement
+# UPDATED: 2026-07-30
+# DESCRIPTION: Supplement rules for blackmatrix7 Claude.list
+# BASE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list
+
+# Claude core domains missing from upstream
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# CDN, authentication and content services not covered by anthropic.com
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN,anthropic.com.cdn.cloudflare.net
+DOMAIN,anthropic.auth0.com
+DOMAIN,anthropic-com.ghost.io
+
+# Claude Code telemetry and feature delivery
+# These are shared third-party services and may also be used by other apps.
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,browser-intake-us5-datadoghq.com
+
+# Anthropic network fallback (current AS399358 announcements)
+IP-CIDR,160.79.104.0/23,no-resolve
+IP-CIDR,2607:6bc0::/48,no-resolve
+IP-CIDR,2607:6bc0:11::/48,no-resolve
+IP-ASN,399358,no-resolve
