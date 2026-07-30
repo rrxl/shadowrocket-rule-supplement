@@ -24,8 +24,28 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 
 ```text
 rule/Shadowrocket/
-└── Netflix/
-    └── NetflixSupplement.list
+├── Netflix/
+│   └── NetflixSupplement.list
+├── OpenAI/
+│   └── OpenAISupplement.list
+└── Claude/
+    └── ClaudeSupplement.list
+```
+
+## Claude 规则
+
+用于补充 blackmatrix7 Claude 规则，覆盖：
+
+- Claude Web 服务域名
+- Claude Code 相关服务
+- Anthropic 登录/CDN 服务
+- 部分缺失的网络出口规则
+
+使用：
+
+```ini
+RULE-SET,https://raw.githubusercontent.com/rrxl/shadowrocket-rule-supplement/main/rule/Shadowrocket/Claude/ClaudeSupplement.list,Claude
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list,Claude
 ```
 
 ## 收录标准
