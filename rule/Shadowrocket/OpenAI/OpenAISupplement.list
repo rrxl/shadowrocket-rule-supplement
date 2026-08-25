@@ -1,8 +1,13 @@
 # NAME: OpenAI Supplement
 # AUTHOR: rrxl
 # PURPOSE: Supplement blackmatrix7/ios_rule_script OpenAI rules
-# VERIFIED: 2026-07-29
+# VERIFIED: 2026-08-25
 
+# OpenAI / ChatGPT domains missing from upstream
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,chatgpt.site
+
+# Existing verified third-party service endpoints
 DOMAIN-SUFFIX,ct.sendgrid.net
 DOMAIN-SUFFIX,oaistatsig.com
 DOMAIN,cdn.workos.com
@@ -13,3 +18,7 @@ DOMAIN,images.workoscdn.com
 DOMAIN,rum.browser-intake-datadoghq.com
 DOMAIN,setup.workos.com
 DOMAIN,workos.imgix.net
+
+# OpenAI-owned network (AS401518)
+IP-CIDR,199.47.142.0/23,no-resolve
+IP-ASN,401518,no-resolve
