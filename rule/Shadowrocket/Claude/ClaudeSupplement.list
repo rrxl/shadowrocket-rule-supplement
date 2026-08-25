@@ -1,7 +1,7 @@
 # NAME: Claude Supplement
 # AUTHOR: rrxl
 # REPO: https://github.com/rrxl/shadowrocket-rule-supplement
-# UPDATED: 2026-07-30
+# UPDATED: 2026-08-25
 # DESCRIPTION: Supplement rules for blackmatrix7 Claude.list
 # BASE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list
 
@@ -20,6 +20,8 @@ DOMAIN,anthropic-com.ghost.io
 
 # Claude Code telemetry and feature delivery
 # These are shared third-party services and may also be used by other apps.
+DOMAIN,cdn.growthbook.io
+DOMAIN,http-intake.logs.us5.datadoghq.com
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,statsigapi.net
 DOMAIN-SUFFIX,browser-intake-us5-datadoghq.com
