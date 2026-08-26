@@ -1,0 +1,8 @@
+# NAME: Oyunfor Supplement
+# AUTHOR: rrxl
+# PURPOSE: Route Oyunfor first-party services consistently
+# VERIFIED: 2026-08-26
+
+# Covers oyunfor.com and all first-party subdomains, including
+# www / livechat / cdn / assets / api / invoice / track and future subdomains.
+DOMAIN-SUFFIX,oyunfor.com
