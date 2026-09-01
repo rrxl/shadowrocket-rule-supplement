@@ -1,7 +1,7 @@
 # NAME: Claude Supplement
 # AUTHOR: rrxl
 # REPO: https://github.com/rrxl/shadowrocket-rule-supplement
-# UPDATED: 2026-08-25
+# UPDATED: 2026-09-01
 # DESCRIPTION: Supplement rules for blackmatrix7 Claude.list
 # BASE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list
 
@@ -19,12 +19,13 @@ DOMAIN,anthropic.auth0.com
 DOMAIN,anthropic-com.ghost.io
 
 # Claude Code telemetry and feature delivery
-# These are shared third-party services and may also be used by other apps.
+# Keep shared third-party services exact to avoid capturing other apps.
 DOMAIN,cdn.growthbook.io
+DOMAIN,browser-intake-us5-datadoghq.com
 DOMAIN,http-intake.logs.us5.datadoghq.com
-DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,statsigapi.net
-DOMAIN-SUFFIX,browser-intake-us5-datadoghq.com
+# Sentry and generic statsigapi.net rules are intentionally omitted:
+# Sentry is shared by many apps, while Claude Code Statsig telemetry uses
+# statsig.anthropic.com, already covered by the upstream anthropic.com suffix.
 
 # Anthropic network fallback (current AS399358 announcements)
 IP-CIDR,160.79.104.0/23,no-resolve
