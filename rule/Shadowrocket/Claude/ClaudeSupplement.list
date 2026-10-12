@@ -1,13 +1,17 @@
 # NAME: Claude Supplement
 # AUTHOR: rrxl
 # REPO: https://github.com/rrxl/shadowrocket-rule-supplement
-# UPDATED: 2026-09-01
+# UPDATED: 2026-10-12
 # DESCRIPTION: Supplement rules for blackmatrix7 Claude.list
 # BASE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list
 
-# Claude core domains missing from upstream
-DOMAIN-SUFFIX,claude.com
+# Claude first-party domains missing from upstream
+# Sources: https://code.claude.com/docs/en/desktop (claude.app)
+#          https://github.com/v2fly/domain-list-community/blob/master/data/anthropic (claude.dev)
 DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claude.app
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claude.dev
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
