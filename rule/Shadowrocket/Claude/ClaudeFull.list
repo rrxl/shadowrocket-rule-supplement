@@ -1,0 +1,43 @@
+# NAME: Claude Full
+# AUTHOR: rrxl
+# REPO: https://github.com/rrxl/shadowrocket-rule-supplement
+# UPDATED: 2026-10-12
+# DESCRIPTION: Self-contained Shadowrocket RULE-SET for Claude Web, Desktop, Code and Anthropic API.
+# SOURCES:
+#   https://code.claude.com/docs/en/network-config
+#   https://code.claude.com/docs/en/desktop
+#   https://platform.claude.com/docs/en/api/ip-addresses
+#   https://github.com/v2fly/domain-list-community/blob/master/data/anthropic
+#   https://radar.cloudflare.com/routing/as399358
+#   https://github.com/blackmatrix7/ios_rule_script
+# IMPORTANT: This file contains matchers ONLY, not policy decisions.
+# Bind to a proxy-only policy (no DIRECT fallback), place before CN/DIRECT/FINAL.
+# Shared hosts used by Claude Code (github.com, storage.googleapis.com, registry.npmjs.org)
+# are intentionally excluded to avoid routing unrelated traffic.
+
+# Core Anthropic / Claude domains
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.app
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claude.dev
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# Specific external endpoints (avoid wildcarding shared providers)
+DOMAIN,anthropic-com.ghost.io
+DOMAIN,anthropic.auth0.com
+DOMAIN,anthropic.com.cdn.cloudflare.net
+DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN,cdn.growthbook.io
+DOMAIN,cdn.usefathom.com
+DOMAIN,http-intake.logs.us5.datadoghq.com
+DOMAIN,servd-anthropic-website.b-cdn.net
+
+# Anthropic BGP prefixes and ASN fallback; verify periodically
+IP-CIDR,160.79.104.0/23,no-resolve
+IP-CIDR,2607:6bc0::/48,no-resolve
+IP-CIDR,2607:6bc0:11::/48,no-resolve
+IP-ASN,399358,no-resolve
