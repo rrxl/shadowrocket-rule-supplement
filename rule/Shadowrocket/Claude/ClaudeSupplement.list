@@ -1,7 +1,7 @@
 # NAME: Claude Supplement
 # AUTHOR: rrxl
 # REPO: https://github.com/rrxl/shadowrocket-rule-supplement
-# UPDATED: 2026-10-12
+# UPDATED: 2026-11-01
 # DESCRIPTION: Supplement rules for blackmatrix7 Claude.list
 # BASE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Claude/Claude.list
 
@@ -12,10 +12,17 @@ DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claude.app
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,claude.dev
+DOMAIN-SUFFIX,claude.new
+DOMAIN-SUFFIX,claude.site
+DOMAIN-SUFFIX,claudeacademy.com
+DOMAIN-SUFFIX,claudepages.dev
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
 
+# 2026-11-01: claude.site publishes Artifacts; claudeacademy.com redirects
+# to academy.claude.com; claude.new and claudepages.dev are present in
+# active v2fly provider data and hosted by Anthropic's infrastructure.
 # CDN, authentication and content services not covered by anthropic.com
 DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN,anthropic.com.cdn.cloudflare.net
