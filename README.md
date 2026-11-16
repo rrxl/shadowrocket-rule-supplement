@@ -24,6 +24,8 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 
 ```text
 rule/Shadowrocket/
+├── AI/
+│   └── AISupplement.list
 ├── Netflix/
 │   └── NetflixSupplement.list
 ├── OpenAI/
@@ -67,6 +69,12 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 ```
 
 如需 Claude 代理故障时停止访问，请把 `Claude` 策略组设置为**仅包含代理节点、不得回退到 DIRECT**，并将这两条规则放在地区直连和 `FINAL` 规则之前。国内 DNS 优先、国外 DNS 备用属于 `[General]` 配置，不写入此补充规则文件。流量未经过 Shadowrocket VPN 时，规则无法提供断线阻断保护。
+
+## 通用 AI 规则
+
+[AISupplement.list](rule/Shadowrocket/AI/AISupplement.list) 供 Shadowrocket 与 mihomo 共用，覆盖 Grok、Google AI Studio、NotebookLM、Microsoft Copilot、GitHub Copilot、Cursor 和 Perplexity 的专用域名。把它放在 Google、Microsoft、GitHub、Twitter 等通用规则之前。ChatGPT 和 Claude 的补充仍在各自的规则文件中维护。
+
+服务端点参考 [GitHub Copilot](https://docs.github.com/en/copilot/reference/copilot-allowlist-reference)、[Microsoft Copilot](https://learn.microsoft.com/en-us/copilot/plan/add-copilot-endpoints-allowlist) 和 [Cursor](https://cursor.com/docs/enterprise/network-configuration) 的文档。共享登录、通用 API 和 CDN 继续由原有规则分流。
 
 ## 收录标准
 
